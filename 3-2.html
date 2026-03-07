@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Septology Vol. III, No. 2: On An Upswing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="https://assets.buttondown.email/images/bb8da89c-cde3-4358-8c27-a2dd22c13397.png" />
+  <style>
+    @font-face {
+      font-family: 'Verre';
+      src: url('https://tim-hatton.github.io/septology/Verre-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Geist', sans-serif;
+      background-color: white;
+      color: #000;
+      padding: 0;
+    }
+
+    a {
+      color: #808080;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #808080;
+    }
+
+    .logo {
+      text-align: center;
+      padding: 60px 20px 20px 20px;
+    }
+
+    .logo img {
+      max-width: 420px;
+      width: 100%;
+      height: auto;
+    }
+
+    .header-full-width-bar {
+      width: 100%;
+      border-bottom: 3px solid #000;
+      background-color: white;
+    }
+
+    .header-inner-column {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      gap: 24px;
+      font-family: 'Verre', 'IBM Plex Mono', monospace;
+      font-size: 16px;
+      padding: 15px 0;
+    }
+
+    .header-inner-column span:nth-child(1) {
+      text-align: left;
+    }
+
+    .header-inner-column span:nth-child(2) {
+      text-align: center;
+    }
+
+    .header-inner-column span:nth-child(3) {
+      text-align: right;
+    }
+
+    .content-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content-section {
+      border-left: 3px solid #000;
+      border-right: 3px solid #000;
+      border-bottom: 3px solid #000;
+      padding: 40px;
+      background-color: white;
+    }
+
+    .content-section h1,
+    .content-section h2,
+    .content-section h3,
+    .subsection h1,
+    .subsection h2,
+    .subsection h3 {
+      font-family: 'Verre', 'IBM Plex Mono', monospace;
+      font-weight: normal;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .content-section h1 {
+      font-size: 24px;
+    }
+
+    .content-section h3,
+    .subsection h3 {
+      font-size: 20px;
+    }
+
+    .content-section p,
+    .content-section li,
+    .content-section figcaption,
+    .subsection p,
+    .subsection li,
+    .subsection figcaption {
+      font-family: 'Geist', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 1.6em;
+    }
+
+    .content-section strong,
+    .subsection strong {
+      font-family: 'Verre', 'IBM Plex Mono', monospace;
+      font-weight: 500;
+    }
+
+    .content-section p:last-child,
+    .content-section figure:last-child,
+    .content-section ul:last-child,
+    .subsection p:last-child,
+    .subsection figure:last-child,
+    .subsection ul:last-child {
+      margin-bottom: 0;
+    }
+
+    .content-section hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 20px 0;
+    }
+
+    .content-section figure,
+    .subsection figure {
+      margin: 24px 0;
+      width: 100%;
+    }
+
+    .content-section figure img,
+    .subsection figure img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d9d9d9;
+    }
+
+    .hero-link {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 13px;
+    }
+
+    .subsection {
+      border-left: 3px solid #000;
+      border-right: 3px solid #000;
+      border-bottom: 3px solid #000;
+      border-top: none;
+      padding: 40px;
+      background-color: white;
+    }
+
+    .subsection h3,
+    .subsection h1 {
+      margin-bottom: 12px;
+    }
+
+    .footer-text {
+      max-width: 800px;
+      margin: 0 auto;
+      font-family: 'Geist', sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      padding: 30px 0;
+      text-align: left;
+    }
+
+    .footer-text p {
+      margin-bottom: 10px;
+    }
+
+    .footnotes p {
+      font-size: 13px;
+      color: #333;
+    }
+
+    sup a {
+      text-decoration: none;
+      color: #808080;
+    }
+
+    .footnotes p {
+      scroll-margin-top: 24px;
+    }
+
+    @media (max-width: 840px) {
+      .header-inner-column,
+      .content-container,
+      .footer-text {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+      }
+
+      .logo {
+        padding-top: 40px;
+      }
+
+      .content-section,
+      .subsection {
+        padding: 24px;
+      }
+
+      .header-inner-column {
+        font-size: 14px;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="https://assets.buttondown.email/images/1e56c9f8-8917-423a-9663-9dbdc44837a3.png?w=960&amp;fit=max" alt="Septology header image for Momentum" />
+  </div>
+
+  <div class="header-full-width-bar">
+    <div class="header-inner-column">
+      <span>Vol. III No. 2</span>
+      <span>"On An Upswing"</span>
+      <span><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.timhatton.online/newsletter-archive">Back To Newsletter Archive</a></span>
+    </div>
+  </div>
+
+  <div class="content-container">
+    <div class="content-section">
+      <h1>Momentum</h1>
+      <p>A new guy had joined our church small group, and on about his second week, he declared that he was "Three solid dudes and a girlfriend away from self-actualization." Becky or someone gestured around the room, where several men were sitting. "Not you guys," he said. "Respectfully."</p>
+
+      <figure>
+        <img src="https://assets.buttondown.email/images/f4c0ad69-87ab-4e29-a5c6-6d328b307cba.png?w=960&amp;fit=max" alt="Embedded image from the newsletter" />
+      </figure>
+
+      <p>He's 24? I think he was 23 at the time? Goes by his last name. Moved to Tulsa right after college. Adjusting to the rhythm of adult life, he'll ask such questions as "Is everything just stupid and gay now?" In many cases it is. He's totaled two cars since joining the group roughly a year and a half ago. After one crash he hitched a ride on a fire truck into work.</p>
+      <p>He has introduced our elder (26-32) cohort to new vocabulary words including "Bapple" (Busch Light Apple beer), and "mogging" which I understand is similar to one-upping someone, putting them to shame. Right before I learned that, he told me someone had prayermogged him at church camp once, and I choked on my drink.</p>
+      <p>His most enduring catchphrase, though, is "the upswing." We go around and each of us talks about how things are going, and probably three weeks out of four, he says he's on an upswing. It's all coming together. We're so back. He uses this phrase to essentially skip his turn and move lightly over whatever he might be thinking, but in a space where saying like "Pass" would deaden the conversational energy, "I'm on an upswing" ignites it. Let's go!! That's what we like to hear!!!</p>
+      <p>Even though it's a punchline, I've been spending a lot of time with the idea of the upswing. It implies a downswing, and it also implies a sense of momentum. I don't think the upswing and downswing are equal and opposite—that what comes up must come down—and I don't think we have to spend equal time on each. But I do think we're always moving in one direction or the other.</p>
+      <p>Me personally, I'm on the downswing. After a busy and successful start to the year, I was ready for a break after. But instead, the past two or three weeks I've been moving slower than usual. Scrolling more. Playing a fair amount of Nintendo Switch Sports™ Tennis. I feel like I am not the disciplined person I want to be. My momentum has stalled, and the more it is stalled, the harder it is to get back. Downswing.</p>
+      <p>My current thesis is that there are three zones of effort: there's being on task (upswing), and there's recovering (also upswing; necessary counterbalance), but in between there is <em>killing time</em>, which is where you stall out. If I am scrolling on an app, my brain is not working on anything useful or important, but neither is it open enough to allow for any other thoughts. Instead of moving between rest and work, each propelling the other, I'm sitting in the middle, not going anywhere.</p>
+      <p>If I'm trying to write something on the computer, then opening the document is when I am on task, and taking a break to stretch or take a walk would be recovery, but the instinct is to click open a new browser tab if I feel the slightest friction keeping me from putting words on the page. The other tab is where I am killing time.</p>
+      <p>At that moment of distraction, I have three options: stay in the document and finish the thought (most rewarding, incredibly difficult), move my body without distracting my mind, like stretching or looking out the window (medium rewarding, also surprisingly difficult), or distract myself with something else online (actively unrewarding, I feel immediately worse, this is the easiest thing in the world, it is all I ever want to do).</p>
+      <p>I know that the best thing to get me out of a downswing is to complete a task. Knock something off the list. The satisfaction of accomplishment provides me with the energy and motivation I need for the next thing. After doing that for long enough, I need to rest, which is good and healthy and does not necessarily kill momentum. I know the feeling rest gives, I feel recharged and restored and ready to start a new project. It does not come from Nintendo Switch Sports™ Tennis.</p>
+      <p>I don't know if this will come as a surprise or not, but I had been stalled trying to put words on the page for <em>Septology</em> this month, and I have written this as a way of coaching myself through the process. The good news is that by finishing the newsletter, I have accomplished a task. Now it's on to the next.</p>
+    </div>
+
+    <div class="subsection">
+      <h3><strong>1. Fault Lines</strong></h3>
+      <p>The big work project I wrote about <a target="_blank" rel="noopener noreferrer nofollow" href="https://tim-hatton.github.io/septology/3-1">last month</a>? It's done! 82 pages, 15,000 words. My friends <sup><a href="#fn1" id="ref1">[1]</a></sup> <sup><a href="#fn2" id="ref2">[2]</a></sup> get the <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.datocms-assets.com/62658/1771352902-lightcast_fault_lines_2_17.pdf">full PDF here</a>. Read the first eight pages and then skip to page 79, and you'll have hit the highlights.</p>
+      <p>I wouldn't say it was <em>satisfying</em> that our report suggested “there will be more wars and the economy will suffer” and the next week war broke out. Saying that would be in poor taste. So I won't!</p>
+    </div>
+
+    <div class="subsection">
+      <h3><strong>2. Apparently All The Good Stuff Happened In 2006</strong></h3>
+      <p>I was bored browsing all the streaming apps when I remembered I don't have to limit myself to the top results they show me. Why watch a Peacock exclusive when I could watch <em>The Sopranos</em>? So I've started that. And <em>Friday Night Lights</em>. And that's in addition to <em>The West Wing</em>, which Becky and I are almost done with (six out of seven seasons). I guess <em>Mad Men</em> comes next. Then I'll have to finish <em>The Wire</em>.</p>
+    </div>
+
+    <div class="subsection">
+      <h3><strong>3. “One Of Us”</strong></h3>
+      <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.runnersworld.com/runners-stories/a70499412/harry-styles-marathon-haruki-murakami/"><em>Runner's World</em> magazine has published an interview</a> where celebrated Japanese novelist Haruki Murakami talks to Harry Styles about marathons and creativity. Murakami uses the time to think through what he's working on, while Styles empties his mind so he's ready when he gets back to the studio. (I'm more like Murakami on this.)</p>
+      <figure>
+        <img src="https://assets.buttondown.email/images/4585e741-859b-4afd-b7c4-9ef36cc0bbce.png?w=960&amp;fit=max" alt="Murakami and Harry Styles newsletter image" />
+      </figure>
+      <p>As long as we're going to have big-brand celebrity marketing junkets, I'm glad that some of them are so precisely aligned to my interests.</p>
+    </div>
+
+    <div class="subsection">
+      <h3><strong>4. The Public Library Is Full Of Surprises</strong></h3>
+      <p>Here's the artist Tom Sachs, describing a book he checked out from the library growing up.</p>
+      <figure>
+        <img src="https://assets.buttondown.email/images/1241d9ce-28c3-4d9b-9cb0-c03fc2ab9b22.png?w=960&amp;fit=max" alt="Tom Sachs quote about Raymond Loewy and the library" />
+      </figure>
+      <p>I read that and thought “Well why not?” so I searched for Raymond Loewy in the Tulsa library and placed a hold on the only title available. When I go to pick it up, the librarian says “You requested some government documents?” “Yes,” I say, surprised. It's a Smithsonian catalog in a special envelope. Smaller than Sachs' book, but still beautiful.</p>
+      <figure>
+        <img src="https://assets.buttondown.email/images/cdedcbc2-3f4f-40cc-9937-bd3e123ea8d9.png?w=960&amp;fit=max" alt="Envelope containing the pamphlet" />
+      </figure>
+      <figure>
+        <img src="https://assets.buttondown.email/images/e9f3e93d-885c-4ba2-9d29-5c41d64577d7.png?w=960&amp;fit=max" alt="The Designs of Raymond Loewy cover" />
+      </figure>
+      <figure>
+        <img src="https://assets.buttondown.email/images/1ff858f6-3d43-4558-a69f-ec05a4b44957.png?w=960&amp;fit=max" alt="Photo of Air Force One from the catalog" />
+      </figure>
+    </div>
+
+    <div class="subsection">
+      <h3><strong>5. Relegation</strong></h3>
+      <p>I began watching the Premier League as a Tottenham Hotspur fan, but because they're historically great, I wanted more intrigue, so I chose <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.timhatton.online/newsletter-archive/2x7-four-second-mile">Nottingham Forest</a> right after they were promoted from the second tier of English football.</p>
+      <p>Now both teams are on the edge of returning there. They're right next to each other in the standings: 16th and 17th, just above the cutoff. They play each other March 22. It's like watching a storm touch down—disastrous, but mesmerizing.</p>
+    </div>
+
+    <div class="subsection">
+      <h3><strong>6. Oh That's Why</strong></h3>
+      <p>For Lent, I'm off all drinks except water <sup><a href="#fn3" id="ref3">[3]</a></sup>. It's the first time I've given up something that wasn't actually bad for me, also the first time I've broken the fast on Sundays, which is generally part of the tradition. I knew that, but didn't realize why until I did it myself: now, Sunday is the best day of the week! Participating in long traditions teaches you why they've endured so long, and why they matter to people.</p>
+    </div>
+
+    <div class="subsection">
+      <h3><strong>7. I had a dream Cormac McCarthy hosted SNL, and the musical guest was De La Soul.</strong></h3>
+      <p>I'm mostly satisfied with the new structure of <em>Septology</em>, its 777-word main essay and seven 77-word subsections. I've only run into two minor problems.</p>
+      <p>First, do you count section titles in the word count? I've decided not to. After imposing constraints elsewhere, it's nice to cut loose.</p>
+      <p>The second problem is sometimes an idea cannot be stretched into 77 words. Then I just have to cut it, unless I find some other trick to wedge it in.</p>
+    </div>
+
+    <div class="content-section">
+      <p>Thank you, as always, for reading. I'll be back on April 7, which is a Tuesday</p>
+      <p>From Tulsa,</p>
+      <p><em>Tim</em></p>
+    </div>
+
+    <div class="content-section footnotes">
+      <p id="fn1"><strong><a href="#ref1">[1]</a></strong> All my readers are my friends!</p>
+      <p id="fn2"><strong><a href="#ref2">[2]</a></strong> Not all my friends are my readers…</p>
+      <p id="fn3"><strong><a href="#ref3">[3]</a></strong> I hate to sound like a mug or a Facebook page for women in their 50s but giving up coffee has not helped with my downswing I will be honest</p>
+    </div>
+  </div>
+
+  <div class="footer-text">
+    <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.timhatton.online/newsletter-archive">Back to newsletter archive</a></p>
+  </div>
+</body>
+</html>
