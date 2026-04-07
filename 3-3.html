@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Septology Vol. III No. 3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="https://assets.buttondown.email/images/bb8da89c-cde3-4358-8c27-a2dd22c13397.png" />
+  <style>
+    @font-face {
+      font-family: 'Verre';
+      src: url('https://tim-hatton.github.io/septology/Verre-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Geist', sans-serif;
+      background-color: white;
+      color: #000;
+      padding: 0;
+    }
+
+    a {
+      color: #808080;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #808080;
+    }
+
+    .logo {
+      text-align: center;
+      padding: 60px 20px 20px 20px;
+    }
+
+    .logo img {
+      max-width: 420px;
+      width: 100%;
+      height: auto;
+      display: inline-block;
+    }
+
+    .hero-link {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 13px;
+    }
+
+    .header-full-width-bar {
+      width: 100%;
+      border-bottom: 3px solid #000;
+      background-color: white;
+    }
+
+    .header-inner-column {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      gap: 24px;
+      font-family: 'Verre', 'IBM Plex Mono', monospace;
+      font-size: 16px;
+      padding: 15px 0;
+    }
+
+    .header-inner-column span:nth-child(1) {
+      text-align: left;
+    }
+
+    .header-inner-column span:nth-child(2) {
+      text-align: center;
+    }
+
+    .header-inner-column span:nth-child(3) {
+      text-align: right;
+    }
+
+    .content-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content-section {
+      border-left: 3px solid #000;
+      border-right: 3px solid #000;
+      border-bottom: 3px solid #000;
+      border-top: none;
+      padding: 40px;
+      background-color: white;
+    }
+
+    .subsection {
+      border-left: 3px solid #000;
+      border-right: 3px solid #000;
+      border-bottom: 3px solid #000;
+      border-top: none;
+      padding: 40px;
+      background-color: white;
+    }
+
+    .content-section h1,
+    .content-section h2,
+    .content-section h3,
+    .subsection h1,
+    .subsection h2,
+    .subsection h3 {
+      font-family: 'Verre', 'IBM Plex Mono', monospace;
+      font-weight: normal;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .content-section h1 {
+      font-size: 24px;
+    }
+
+    .content-section h3,
+    .subsection h3 {
+      font-size: 20px;
+    }
+
+    .content-section p,
+    .content-section li,
+    .content-section figcaption,
+    .subsection p,
+    .subsection li,
+    .subsection figcaption {
+      font-family: 'Geist', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 1.6em;
+    }
+
+    .content-section p:last-child,
+    .content-section figure:last-child,
+    .content-section ul:last-child,
+    .subsection p:last-child,
+    .subsection figure:last-child,
+    .subsection ul:last-child {
+      margin-bottom: 0;
+    }
+
+    .content-section strong,
+    .subsection strong {
+      font-family: 'Verre', 'IBM Plex Mono', monospace;
+      font-weight: 500;
+    }
+
+    .content-section figure,
+    .subsection figure {
+      margin: 24px 0;
+      width: 100%;
+    }
+
+    .content-section figure img,
+    .subsection figure img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d9d9d9;
+    }
+
+    .content-section hr,
+    .subsection hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 20px 0;
+    }
+
+    sup a {
+      text-decoration: none;
+      color: #808080;
+    }
+
+    .footnotes p {
+      font-size: 13px;
+      color: #333;
+      scroll-margin-top: 24px;
+    }
+
+    .footer-text {
+      max-width: 800px;
+      margin: 0 auto;
+      font-family: 'Geist', sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      padding: 30px 0;
+      text-align: left;
+    }
+
+    .footer-text p {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 840px) {
+      .header-inner-column,
+      .content-container,
+      .footer-text {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+      }
+
+      .logo {
+        padding-top: 40px;
+      }
+
+      .content-section,
+      .subsection {
+        padding: 24px;
+      }
+
+      .header-inner-column {
+        font-size: 14px;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="https://assets.buttondown.email/images/c894edf7-05f3-457d-b590-4d85ced4d519.png?w=960&fit=max" alt="Subscription box image" />
+  </div>
+
+  <div class="header-full-width-bar">
+    <div class="header-inner-column">
+      <span>Vol. III No. 3</span>
+      <span>That's Me. That's Us.</span>
+      <span><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.timhatton.online/newsletter-archive">Back To Newsletter Archive</a></span>
+    </div>
+  </div>
+
+  <div class="content-container">
+    <div class="content-section">
+      <h1>Alligator</h1>
+      <p style="color: #808080; margin-bottom: 1.6em;">
+  <em>“Cataract that this world is, it is remarkable to consider what does abide in it.”<br>
+  —Marilynne Robinson, from  </em> Gilead
+</p>
+
+      <p>In January, my father-in-law and his partner fostered a puppy (a Belgian Malinois/Dutch Shepherd, one of them big police dogs), and they wanted to keep it, but they weren’t sure, so they put it up for adoption, but they regretted that and wanted it back, but unfortunately it doesn’t work that way. So instead, while they were at her beach house in Pensacola, Florida, they found an identical dog for adoption in Tampa, Florida, so they went and picked her up. That’s a seven hour drive. They gave the new puppy the same name as the first one.</p>
+
+      <p>This makes a certain type of sense because that was a very Florida thing to do. My father-in-law lives in Oklahoma, but spiritually, he’s a Florida Man. He asked if he could wear his “<a target="_blank" rel="noopener noreferrer nofollow" href="https://huckberry.com/store/crocs/category/p/94218-islander">dress Crocs</a>” to our wedding. That’s not a bad thing, and I don’t say it to mock or disparage (I myself am a proud owner of some dress Crocs).</p>
+
+      <p>People don’t get surprised when I tell them I lived in Iowa (or Illinois, or New York, or Idaho). Even Oklahoma, which is much more Southern, is defined by the plains more than anything, and has its own distinct dust bowl humility. They do get surprised when I tell them I lived in Florida.</p>
+
+      <p>When I imagine “someone who grew up in Tampa Bay,” he’s got a dog on a chain and a workout bench in the yard that he goes out and uses wearing Oakley sunglasses, big shorts, and no shirt. I don’t think that’s the energy I give off (correct me if I’m wrong).</p>
+
+      <p>Last week, I was back there. Most of my family was in Orlando for a week and we took a day to go see our old house, which I had not seen since I moved away 17 years ago.</p>
+
+      <p>Driving around, my dad commented that there are no roots there, because everyone came from somewhere else, and people come to Florida to check out. Nobody cares. Maybe I would feel differently if I grew up near the orange groves, but the Florida I know (the Gulf Coast and Orlando) is full of aggression, indulgence, and kitsch. I used to drive past Hulk Hogan’s house on my way to school.</p>
+
+      <p>And you just accept it and move on, like you do the gators. There are so many gators. Our first day moving in, actually, 20 years ago, there was a huge bull sunning himself on a cement slab down the block. Nothing to do about that except stay in the car. Becky saw another one in Orlando where we were staying. Florida is a place where you can safely assume that any fresh water is home to enormous, carnivorous reptiles. <sup><a href="#fn1" id="ref1">[1]</a></sup></p>
+<figure style="margin: 24px 0;">
+  <img 
+    src="https://assets.buttondown.email/images/60a1010e-b5eb-42ad-84c2-ef2936a2f0cc.png?w=960&fit=max" 
+    alt="alligator illustration"
+    style="display: block; width: 100%; max-width: 100%; height: auto; border: 1px solid #d9d9d9;"
+  />
+</figure>
+      <p>I like gators as a symbol of the whole state, because once you get past the initial rush of fear and repulsion at seeing one, it becomes an object of fascination and wonder. Their bodies are so strange, and the danger of being close to them sharpens your attention. The beauty doesn’t contradict the disgust, but instead provides a counterweight. How wonderful to be in a place where such a weird and impressive thing can exist out in the open.</p>
+
+      <p>It was a special thing to know that an alligator lived in my neighborhood because you know who else lived in my neighborhood? Me, I did. I didn’t feel like I had entered a different, foreign world, but rather that my world had gotten bigger. There was more in it than I realized.</p>
+
+      <p>Once you understand that a place like Florida can be weird and gross and often sad, you stop focusing on it and instead see what else is there. Yes, there’s a strip club next to a church, but look at how green everything is. Incredible things happen here alongside the terrible.</p>
+
+      <p>It was meaningful to spend some time growing up there, because now I see this humid, kitschy culture—very different from the ones I identify with—but it isn’t foreign or other or worse. That’s me. That’s us.</p>
+
+      <p>After visiting our house and church last week, we set out for the beach. Got some sandwiches from Publix for a little picnic. After eating, we walked around and threw the football and picked up shells to show each other. Our lovely time at the beach was interrupted by spitting rain that passed over us in waves, but we didn’t focus on that, because we focused on watching the sunset out over the Gulf.</p>
+
+      <p>When we turned around, the Artemis II had launched from the other side of the state, and we could just make it out through the clouds.</p>
+    </div>
+<div class="content-section">
+  <p style="margin-top: 0; margin-bottom: 1.6em; font-size: 13px;">
+    You're reading an archived copy of Septology. Sign up to receive the next issue right to your e-mail:
+  </p>
+
+  <form
+    action="https://buttondown.com/api/emails/embed-subscribe/septology"
+    method="post"
+    target="popupwindow"
+    onsubmit="window.open('https://buttondown.com/septology', 'popupwindow')"
+    class="embeddable-buttondown-form"
+    style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px;"
+  >
+    <input 
+      type="email" 
+      name="email" 
+      id="bd-email" 
+      placeholder="you@example.com" 
+      style="font-family: 'IBM Plex Mono', monospace; padding: 8px; width: 100%; max-width: 450px; border: 1px solid #000; margin-bottom: 10px;" 
+    />
+
+    <input 
+      type="submit" 
+      value="Subscribe" 
+      style="background-color: #000; color: #fff; border: none; padding: 10px 20px; border-radius: 4px; font-family: 'IBM Plex Mono', monospace; cursor: pointer; font-size: 14px;" 
+    />
+  </form>
+</div>
+    <div class="subsection">
+      <h3><strong>1. Trinity</strong></h3>
+      <p>Related: on our trip we also visited Disney Springs, and passed the House of Blues. Its facade is a bizarre blend of church, club, and shack.</p>
+
+      <p>A very reasonable response would be “That’s not right. Church is not the club.” Which is true, but it seems irrelevant, because this is so clearly expressing a different concept of church.</p>
+
+      <figure>
+        <img src="https://assets.buttondown.email/images/4eeaca8c-a733-4a7f-82a2-0bfa8a236e15.png?w=960&amp;fit=max" alt="a church door under corrugated steel with a neon sign reading &quot;club&quot; above it" draggable="false" />
+        <figcaption></figcaption>
+      </figure>
+
+      <p>It reminds me of this painting, <em>Trinity</em>, by Clyde Broadway. I don’t share its worldview, but I understand it.</p>
+
+      <figure>
+        <img src="https://assets.buttondown.email/images/7ea1c2c3-a1dc-48fd-bad8-c70a6bac3d61.png?w=960&amp;fit=max" alt="painting of elvis, Jesus, and robert e lee, called &quot;Trinity&quot; in a gilt frame" draggable="false" />
+        <figcaption><a target="_blank" rel="noopener noreferrer nofollow" href="https://ogdenmuseum.org/collection/trinity-elvis-and-jesus-and-robert-e-lee/">Full Color Link</a></figcaption>
+      </figure>
+    </div>
+
+    <div class="subsection">
+      <h3><strong>2. Timothy Scott Hatton</strong></h3>
+
+      <p>My e-mail address, <a target="_blank" rel="noopener noreferrer nofollow" href="mailto:nottahmit@gmail.com">nottahmit@gmail.com</a>, (“Tim Hatton” backwards) is difficult to pronounce, so I usually just spell it out. When I chose it at age 17, I did not know that, and neither did I know Google wouldn’t let me change it. Until this week!</p>
+
+      <p>As of yesterday, you can reach me via <a target="_blank" rel="noopener noreferrer nofollow" href="mailto:timothyscotthatton@gmail.com">timothyscotthatton@gmail.com</a>. It’s felt like putting a beloved but worn-out pair of shoes away in the closet and stepping into new ones.</p>
+    </div>
+
+    <div class="subsection">
+      <h3><strong>3. Three Big Notes</strong></h3>
+
+      <p>At church the guy in front of us was taking sermon notes on his phone (as is good and right 🙏), but they were right above the grocery list in his Notes app, under the heading “One Big Note.” This is an impressive and trustworthy person, so I’ve now tried to adopt his One Big Note. The problem is that I also have Notion and a markdown app called Bear. And then there’s the paper journals too</p>
+    </div>
+
+    <div class="subsection">
+      <h3><strong>4. I Love Everybody</strong></h3>
+
+      <p>While we’re thinking about church: I hope you had a good Easter. This time each year I think about these two poems about the moment of resurrection, which I will include here and not count against my self-imposed 77-word limit. The Howe one I like mainly for its middle, third stanza. <sup><a href="#fn2" id="ref2">[2]</a></sup> The Tate one depicts Jesus’ character almost better than the Gospels. That poem means so much to me that I now own the book it’s from.</p>
+<hr style="border:0;border-top:1px solid #000;margin:16px 0;width:100%;">
+      <p><span style="color: #808080;"><strong>Easter</strong></span></p>
+
+      <p><span style="color: #808080;">Two of the fingers on his right hand</span></p>
+      <p><span style="color: #808080;">had been broken</span></p>
+      <p><span style="color: #808080;">so when he poured back into that hand it surprised</span></p>
+      <p><span style="color: #808080;">him—it hurt him at first.</span></p>
+      <p><span style="color: #808080;">And the whole body was too small. Imagine</span></p>
+      <p><span style="color: #808080;">the sky trying to fit into a tunnel carved into a hill.</span></p>
+      <p><span style="color: #808080;">He came into it two ways:</span></p>
+      <p><span style="color: #808080;">From the outside, as we step into a pair of pants.</span></p>
+      <p><span style="color: #808080;">And from the center—suddenly all at once.</span></p>
+      <p><span style="color: #808080;">Then he felt himself awake in the dark alone.</span></p>
+      <p><span style="color: #808080;"><em>Marie Howe</em></span></p>
+<hr style="border:0;border-top:1px solid #000;margin:16px 0;width:100%;">
+      <p><span style="color: #808080;"><strong>Goodtime Jesus</strong></p>
+
+      <p><span style="color: #808080;">Jesus got up one day a little later than usual. He had been dreaming so deep there was nothing left in his head. What was it? A nightmare, dead bodies walking all around him, eyes rolled back, skin falling off. But he wasn’t afraid of that. It was a beautiful day. How ’bout some coffee? Don’t mind if I do. Take a little ride on my donkey, I love that donkey. Hell, I love everybody.</span></p>
+
+      <p><span style="color: #808080;"><em>James Tate</em></span></p>
+    </div>
+
+    <div class="subsection">
+      <h3><strong>5. Kill The Kid Stuff</strong></h3>
+
+      <p>Another poem. Reading <em>Septology</em>, you may have noticed I am haunted by the desire to build a perfect system, and do everything right (see: “Three Big Notes,” above). Ada Limón depicts that feeling here with arresting clarity, and/but I get so wrapped up in it I always forget the turn, two thirds through, that changes the whole thing and settles my anxious brain.</p>
+
+      <p>It’s also about airports, and I remembered it after visiting five this month.</p>
+   <hr style="border:0;border-top:1px solid #000;margin:16px 0;width:100%;">
+
+      <p><strong>The Problem With Travel</strong></p>
+
+      <p><span style="color: #808080;">Every time I’m in an airport,</span></p>
+      <p><span style="color: #808080;">I think I should drastically</span></p>
+      <p><span style="color: #808080;">change my life: Kill the kid stuff,</span></p>
+      <p><span style="color: #808080;">start to act my numbers, set fire</span></p>
+      <p><span style="color: #808080;">to the clutter and creep below</span></p>
+      <p><span style="color: #808080;">the radar like an escaped canine</span></p>
+      <p><span style="color: #808080;">sneaking along the fence line.</span></p>
+      <p><span style="color: #808080;">I’d be cable-knitted to the hilt,</span></p>
+      <p><span style="color: #808080;">beautiful beyond buying, believe</span></p>
+      <p><span style="color: #808080;">in the maker and fix my problems</span></p>
+      <p><span style="color: #808080;">with prayer and property.</span></p>
+      <p><span style="color: #808080;">Then, I think of you, home</span></p>
+      <p><span style="color: #808080;">with the dog, the field full</span></p>
+      <p><span style="color: #808080;">of purple pop-ups — we’re small</span></p>
+      <p><span style="color: #808080;">and flawed, but I want to be</span></p>
+      <p><span style="color: #808080;">who I am, going where</span></p>
+      <p><span style="color: #808080;">I’m going, all over again.</span></p>
+      <p><span style="color: #808080;"><em>Ada Limón</em></span></p>
+    </div>
+
+    <div class="subsection">
+      <h3><strong>6. Crossroads</strong></h3>
+
+      <p>I’ve started a novel, <em>Crossroads</em> by Jonathan Franzen, with a plot that seems written specifically for me. An associate pastor in suburban Chicago has major but unspecified beef with the youth pastor at his own church, but then his own kids join the youth group in an act of rebellion.</p>
+
+      <p>That’s relevant because my dad was <em>also</em> an associate pastor in suburban Chicago—though thankfully without major beeves (to my knowledge). And the church’s name was Crossroads lol</p>
+    </div>
+
+    <div class="subsection">
+      <h3><strong>7. Also Crossroads</strong></h3>
+
+      <p>(I needed another 77 words.) The kids’ names are Becky and Perry Hildebrandt, but <a target="_blank" rel="noopener noreferrer nofollow" href="https://open.spotify.com/track/6ehrvwZ8JHaLahNRpDGlkD?si=f50bfbf2f16049be">Becky’s so hot</a> that it completely upends the social order of their high school when she goes religious. So yet another connection—and I’m only a few dozen pages in!—is that one of the main characters has the same name and first initial of my wife. Pretty fun!</p>
+
+      <p>Also youth-group coded: my sister sent me this and said it was “giving Septology.” Real</p>
+
+      <figure>
+        <img src="https://assets.buttondown.email/images/ab519d4e-fabd-478d-98f5-86e7fc61c1c2.png?w=960&amp;fit=max" alt="christians are always in fashion - we were created by the great designer" draggable="false" />
+        <figcaption></figcaption>
+      </figure>
+    </div>
+
+    <div class="content-section footnotes">
+      <p id="fn1"><strong><a href="#ref1">[1]</a></strong> I’d even be comfortable making the case they are dinosaurs—alligators in their current form evolved about 37 million years ago.</p>
+      <p id="fn2"><strong><a href="#ref2">[2]</a></strong> This is partially because I take issue with the first and fourth stanzas. John 19:36 tells us that Jesus’ bones were not broken, which fulfilled a prophecy made in Psalm 34, and I think that includes the two fingers on the right hand. Also, Jesus didn’t wear pants.</p>
+    </div>
+  </div>
+
+  <div class="footer-text">
+    <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.timhatton.online/newsletter-archive">Back to newsletter archive</a></p>
+  </div>
+</body>
+</html>
