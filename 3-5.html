@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Septology Vol. III No. 5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="https://assets.buttondown.email/images/bb8da89c-cde3-4358-8c27-a2dd22c13397.png" />
+  <style>
+
+    @font-face {
+      font-family: 'Verre';
+      src: url('https://tim-hatton.github.io/septology/Verre-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Geist', sans-serif;
+      background-color: white;
+      color: #000;
+      padding: 0;
+    }
+
+
+    
+    a {
+      color: #808080;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #808080;
+    }
+
+    .logo {
+      text-align: center;
+      padding: 60px 20px 20px 20px;
+    }
+
+    .logo img {
+      max-width: 420px;
+      width: 100%;
+      height: auto;
+      display: inline-block;
+    }
+
+    .hero-link {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 13px;
+    }
+
+    .header-full-width-bar {
+      width: 100%;
+      border-bottom: 3px solid #000;
+      background-color: white;
+    }
+
+    .header-inner-column {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      gap: 24px;
+      font-family: 'Verre', 'IBM Plex Mono', monospace;
+      font-size: 16px;
+      padding: 15px 0;
+    }
+
+    .header-inner-column span:nth-child(1) { text-align: left; }
+    .header-inner-column span:nth-child(2) { text-align: center; }
+    .header-inner-column span:nth-child(3) { text-align: right; }
+
+    .content-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content-section,
+    .subsection {
+      border-left: 3px solid #000;
+      border-right: 3px solid #000;
+      border-bottom: 3px solid #000;
+      border-top: none;
+      padding: 40px;
+      background-color: white;
+    }
+
+    .content-section h1,
+    .content-section h2,
+    .content-section h3,
+    .subsection h1,
+    .subsection h2,
+    .subsection h3 {
+      font-family: 'Verre', 'IBM Plex Mono', monospace;
+      font-weight: normal;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .content-section h1 { font-size: 24px; }
+    .content-section h3,
+    .subsection h3 { font-size: 20px; }
+
+    .content-section p,
+    .content-section li,
+    .content-section figcaption,
+    .subsection p,
+    .subsection li,
+    .subsection figcaption {
+      font-family: 'Geist', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 1.6em;
+    }
+
+    .content-section p:last-child,
+    .content-section figure:last-child,
+    .content-section ul:last-child,
+    .content-section ol:last-child,
+    .subsection p:last-child,
+    .subsection figure:last-child,
+    .subsection ul:last-child,
+    .subsection ol:last-child {
+      margin-bottom: 0;
+    }
+
+    .content-section strong,
+    .subsection strong {
+      font-family: 'Verre', 'IBM Plex Mono', monospace;
+      font-weight: 500;
+    }
+
+    .content-section figure,
+    .subsection figure {
+      margin: 24px 0;
+      width: 100%;
+    }
+
+    .content-section figure img,
+    .subsection figure img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d9d9d9;
+    }
+
+    .content-section hr,
+    .subsection hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 20px 0;
+    }
+
+    .subsection ol {
+      padding-left: 22px;
+      margin-bottom: 1.6em;
+    }
+.content-section figcaption,
+.subsection figcaption {
+  font-size: 13px;
+  color: #808080;
+  text-align: center;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+    sup a {
+      text-decoration: none;
+      color: #808080;
+    }
+
+    .footnotes p {
+      font-size: 13px;
+      color: #333;
+      scroll-margin-top: 24px;
+    }
+
+    .footer-text {
+      max-width: 800px;
+      margin: 0 auto;
+      font-family: 'Geist', sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      padding: 30px 0;
+      text-align: left;
+    }
+    .footnotes .signoff {
+  font-family: 'Geist', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #000;
+  margin-bottom: 2rem;
+    }
+    .footer-text p { margin-bottom: 10px; }
+
+
+    
+    @media (max-width: 840px) {
+      .header-inner-column,
+      .content-container,
+      .footer-text {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+      }
+
+      .logo { padding-top: 40px; }
+
+      .content-section,
+      .subsection { padding: 24px; }
+
+      .header-inner-column {
+        font-size: 14px;
+        gap: 12px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="https://assets.buttondown.email/images/c894edf7-05f3-457d-b590-4d85ced4d519.png?w=960&fit=max" alt="Subscription box image" />
+  </div>
+
+  <div class="header-full-width-bar">
+    <div class="header-inner-column">
+      <span>Vol. III No. 5</span>
+      <span>Each Has The Work And Office Of His Trade</span>
+      <span><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.timhatton.online/newsletter-archive">Back To Newsletter Archive</a></span>
+    </div>
+  </div>
+
+  <div class="content-container">
+    <div class="content-section">
+<h1>I Can’t Draw Buildings Very Well, But I Don’t Have To</h1><p></p><p>I watched a lot of <em>Extreme Makeover: Home Edition</em> with my family as a kid. Maybe you remember: reality TV series, they’d find a family who had fallen on hard times, send them on vacation for a week, and then build a whole new house while they were gone. </p><p>Perfectly adequate TV. One episode has always bugged me.</p><p>One boy (I can’t find the episode, or I’d tell you his name) told the crew that he was into architecture—he showed them his drawings of buildings. So they decided to design an architecture-themed room for him. It was, like, decorated in T-squares, with blueprint wallpaper. The detail I remember most clearly is that the headboard of the bed was a protractor. </p><p>When they showed him his new room, the architect told him the types of beams they had used for something, and the kid was like “Oh, cool” and the architect said “Do you know what those are?” and he said no. “Well, you will.” </p><p>There’s an apocryphal quote attributed to Martin Luther: “The Christian shoemaker does his duty not by putting little crosses on the shoes, but by making good shoes.” Likewise: you don’t celebrate architecture by creating a beautiful drafting table, but by creating a beautiful house. </p><p>So there I am, watching on TV, ten or eleven years old, and I’m shaking my head. This is not correct. I recognize myself in this kid, and they are not understanding him. He doesn’t love <em>measuring angles</em>, he loves a well-designed space! You idiots!</p><hr/><p>I’ve reorganized my books again. (This is <a href="https://www.timhatton.online/newsletter-archive/1x7-treat-each-other-right#h.fokydw6z2jbv" rel="noopener noreferrer nofollow" target="_blank">a recurring theme</a> <a href="https://tim-hatton.github.io/septology/2-5" rel="noopener noreferrer nofollow" target="_blank">around here</a>.) Fiction has settled in the back den, nonfiction is settled in the front office room, but the secret third category is what I call in my head the “cool books.” Magazines, zines, photo and coffee table books, special editions. Going through these, I realized there was a lot of architecture. </p><p>Or let me back up, and say something slightly embarrassing. In imagining the new space for these books, I took inspiration from the way that Buck Mason retail stores are laid out. (Buck Mason is like if the Gap were 40% nicer, with prices to match.)<br/></p><figure><img alt="Image" src="https://assets.buttondown.email/images/2295d327-b158-4945-ba05-ba7c6245a012.png?w=960&amp;fit=max"/><figcaption>The Buck Mason Nashville store at 5th and Broadway</figcaption></figure><p>The vibe is late-60s Hollywood. Nice but durable, not fragile and luxurious. I know there’s an inherent hollowness to branded spaces like this, because they’re just projecting an image—they want to look cool in order to sell you jeans—but if I’m honest, I <em>like </em>the image. It<em> does </em>look cool. I will<em> not buy </em>the jeans<em> </em>because I<em> cannot afford </em>them. </p><p>Looking at <a href="https://www.azuremagazine.com/article/chicagos-norman-kelley-puts-the-glass-brick-in-bricks-and-mortar/" rel="noopener noreferrer nofollow" target="_blank">so many pictures of Buck Mason stores</a>, I noticed a pattern: many had stacks of huge books with “LOUIS KAHN” printed on the spine. Alright, so who’s that</p><p><a href="https://britishart.yale.edu/stories/louis-i-kahn" rel="noopener noreferrer nofollow" target="_blank">“Louis Isadore Kahn (American, 1901–1974) is widely recognized as one of the most important and influential architects of the twentieth century.” </a></p><figure><img alt="Image" src="https://assets.buttondown.email/images/e52926ab-20cd-4ceb-9a5f-c63b8e4370d9.png?w=960&amp;fit=max"/><figcaption>The Buck Mason Miami store at Coconut Grove</figcaption></figure><p>So I went ahead and bought a huge book about Louis Kahn (<a href="https://www.phaidon.com/en-us/products/louis-i-kahn-revised-and-expanded-edition" rel="noopener noreferrer nofollow" target="_blank">this one</a>, though I bought it used, for one third of the price). It checks in at five pounds, five ounces, which makes me feel very silly when I heft it up into bed for some light (“light”) reading before falling asleep. </p><p>And look, I know I bought this book for superficial reasons. But its bulk has forced me to make a decision: do I want to read it or not? And it turns out I do. I’m learning a lot. I’ve enjoyed the work of it, acquiring new vocabulary, learning new ways to think about buildings, and I’m almost always in one building or another, so that works out great.</p><p>When it ultimately makes it from the bedstand to the shelf in the front room, the Kahn book will right next to my growing collection of the <em>New York Review of Architecture</em>, a book about the firm Cesar Pelli and Associates that Becky found at a thrift store, and a monograph about The Bachman-Wilson house, designed by Frank Lloyd Wright, and <em>Why Architects Draw, </em>by Paolo Belardi. I’ve had that one the longest, and I only got it last May. </p><p>Unlike the boy on the TV, I never seriously considered architecture as a career, so I haven’t engaged with it very deeply. I haven’t needed to. So as this new interest has grown, it has never been weighed down with any pressure to accomplish anything. I’m a hobbyist. I can’t draw buildings very well. But I don’t have to.</p><p>But what’s really special about this new interest is that I know it is actually an old interest. The 11-year-old architecture critic never went away. The kid is still there, reading a book that’s too big for him as he falls asleep.</p>
+    </div>
+
+    <div class="content-section">
+      <p style="margin-top: 0; margin-bottom: 1.6em; font-size: 13px;">
+        You're reading an archived copy of Septology. Sign up to receive the next issue right to your e-mail:
+      </p>
+
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/septology"
+        method="post"
+        target="popupwindow"
+        onsubmit="window.open('https://buttondown.com/septology', 'popupwindow')"
+        class="embeddable-buttondown-form"
+        style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px;"
+      >
+        <input 
+          type="email" 
+          name="email" 
+          id="bd-email" 
+          placeholder="you@example.com" 
+          style="font-family: 'IBM Plex Mono', monospace; padding: 8px; width: 100%; max-width: 450px; border: 1px solid #000; margin-bottom: 10px;" 
+        />
+
+        <input 
+          type="submit" 
+          value="Subscribe" 
+          style="background-color: #000; color: #fff; border: none; padding: 10px 20px; border-radius: 4px; font-family: 'IBM Plex Mono', monospace; cursor: pointer; font-size: 14px;" 
+        />
+      </form>
+    </div>
+
+    <div class="subsection">
+<h3><strong><strong>1. Cobbling</strong></strong></h3><p>Writing that^, I couldn’t remember the exact text of the Martin Luther quote <sup><a href="#fn1" id="ref1">1</a></sup>, so I searched “best way for a christian to make a shoe.” Then Google AI told me the best way for a Christian to make a shoe:</p><p>“Step 1: Learn the Fundamentals of Cordwaining.</p><p>Step 2: Practice Christian Business Ethics.</p><p>Step 3: Find Reliable Suppliers of Leather and Rubber.</p><p>Can you tell me what kind of shoe or sneaker you’re hoping to build first?” </p>
+    </div>
+
+    <div class="subsection">
+<h3><strong><strong>2. </strong><strong>Magnifica Humanitas</strong></strong></h3><p>Speaking of how Christians ought to do things and also AI, how should a Christian think about AI? You might start with Pope Leo XVI’s <a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html" rel="noopener noreferrer nofollow" target="_blank">encyclical from last month</a>, which is about exactly that. </p><p>1. It’s good! 2. I enjoyed reading its coverage in the (secular) tech media. I kind of expected a brush-off (“stay in your lane, Father”), but the tone was more engaged, like “<a href="https://tbpn.substack.com/p/pope-leos-letter-on-ai-enhanced-games" rel="noopener noreferrer nofollow" target="_blank">His Holiness raised an interesting point about GDP as a metric."</a></p>
+    </div>
+
+    <div class="subsection">
+<h3><strong><strong>3. “Real Faith”</strong></strong></h3><p>Let’s stay on “Christian Leaders” but move to the other end of the spectrum<sup><a href="#fn2" id="ref2">2</a></sup>. I happened to see <a href="https://www.linkedin.com/posts/samuel-dickison-5ba25a1b6_its-been-the-year-of-the-bird-precipitated-ugcPost-7465186531297624064-Ap00/?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAACVg_ssB3mb1907v0ykE6bRYty4PsjJFfKM" rel="noopener noreferrer nofollow" target="_blank">the new graphic identity</a> for controversial (disgraced? infamous?) pastor Mark Driscoll. He has a reputation for arrogance, and I doubt an eagle logo with an M for Mark will help. Prioritizing your personal brand and commissioning a graphic designer for it is not the best way for Christians to lead with humility and integrity, I’m reasonably confident of that.</p><figure><img alt="Image" src="https://assets.buttondown.email/images/6d8f5f3f-8752-46da-bf56-b3d2b5720eba.png?w=960&amp;fit=max"/><figcaption></figcaption></figure>
+    </div>
+
+    <div class="subsection">
+<h3><strong><strong>4. The Best Movie About Architecture</strong></strong></h3><p>is called <a href="https://www.youtube.com/watch?v=r3dcnV6Z9Zs" rel="noopener noreferrer nofollow" target="_blank"><em>Columbus</em></a>, directed by Kogonada, starring John Cho and Haley Lu Richardson. Columbus, Indiana, is a tiny little town full, oddly, of masterpieces of modern architecture. The film is very still, full of wide shots of characters looking at buildings. Early on, one says “This isn’t a movie. Nothing’s going to happen,” which is funny—absolute disaster if you’ve just turned on a movie expecting something to happen.</p><p><em>The Brutalist </em>is probably the second-best movie about architecture.</p>
+    </div>
+
+    <div class="subsection">
+<h3><strong><strong>5. Back To School</strong></strong></h3><p>I mentioned I bought <em>Why Architects Still Draw </em>last May. I was at the Crystal Bridges Museum of American Art, in the gift shop, wearing a shirt that references the movie <em>The Brutalist</em>. The cashier put the pieces together and said “Oh, are you an architecture student?” No, haha, just a fan.</p><p>At first, I was flattered. Then I thought: an architecture <em>student</em>? At my big age of 29? Am I not, by this point, an architect??</p>
+    </div>
+
+    <div class="subsection">
+<h3><strong><strong>6. My 44 Closest Friends</strong></strong></h3><p><a href="https://open.spotify.com/playlist/37i9dQZF1CKWMKUUnxm87d?si=d11bfcd462134c60" rel="noopener noreferrer nofollow" target="_blank">On my Spotify-generated list of all-time most-played songs</a>, I think it’s funny that alongside my favorite artists, there were some (<a href="https://www.youtube.com/watch?v=nSbzyEJ8X9E&amp;t=7s" rel="noopener noreferrer nofollow" target="_blank">Bradley Cooper</a>) who just made one track I played on repeat in 2018<sup><a href="#fn3" id="ref3">3</a></sup>.</p><ol><li><p>Taylor Swift (10 tracks)</p></li><li><p>The National (20)</p></li><li><p>Gang of Youths (8)</p></li><li><p>The Killers (11)</p></li><li><p>Bleachers (5)</p></li><li><p>The Front Bottoms (3)</p></li><li><p>Phoebe Bridgers (7)</p></li><li><p>The 1975 (3)</p></li><li><p>Mumford &amp; Sons</p></li><li><p>London Grammar</p></li><li><p>Julien Baker (2)</p></li><li><p>The Japanese House (2)</p></li><li><p>The War on Drugs</p></li><li><p>Jason Isbell &amp; The 400 Unit</p></li><li><p>Soccer Mommy</p></li><li><p>LCD Soundsystem</p></li><li><p>Samia</p></li><li><p>IDER</p></li><li><p>Better Oblivion Community Center</p></li><li><p>Carly Rae Jepsen</p></li><li><p>The xx</p></li><li><p>Arcade Fire</p></li><li><p>Niall Horan</p></li><li><p>Maggie Rogers (4)</p></li><li><p>8485</p></li><li><p>Torres</p></li><li><p>Petey (2)</p></li><li><p>Caroline Polachek (3)</p></li><li><p>Iron &amp; Wine</p></li><li><p>Car Seat Headrest</p></li><li><p>Charli XCX</p></li><li><p>boygenius</p></li><li><p>Bradley Cooper</p></li><li><p>Chairlift</p></li><li><p>Rostam</p></li><li><p>Lorde (2)</p></li><li><p>Florence + The Machine (3)</p></li><li><p>Glass Animals</p></li><li><p>Kacey Musgraves</p></li><li><p>Sun Kil Moon</p></li><li><p>Modern Baseball</p></li><li><p>Justin bieber</p></li><li><p>Babygirl</p></li><li><p>Typhoon</p></li></ol>
+    </div>
+
+    <div class="subsection">
+<h3><strong><strong>7. Angel Down</strong></strong></h3><p>and also I have a book recommendation: <em>Angel Down </em>by Joseph Kraus, which unfurls in one breathless sentence like this, set in the trenches of World War I and the pace is relentless, </p><p>and against all odds there is an angel of heaven there, she was shot down into No Man’s Land, the book is about the private who rescues her, but really it’s about an inbreaking of holiness in the most godless place men ever created,</p>
+    </div>
+
+    <div class="content-section footnotes">
+
+  <p class= "signoff">That's all this time; thank you, as always, for reading. I'll see you July 7, which is a Tuesday.</p>
+  <p class= "signoff">From Tulsa,</p>
+  <p class= "signoff"> Tim</p>
+
+
+
+    <p id="fn1">
+      <strong><a href="#ref1">[1]</a></strong>
+      Which, as I noted, is not an actual Martin Luther quote. It probably draws upon some of the ideas here in Luther’s Letter to The Christian Nobility of the German Nation Concerning the Reform of the Christian Estate, 1520: “A cobbler, a smith, a farmer, each has the work and office of his trade, and yet they are all alike consecrated priests and bishops, and every one by means of his own work or office must benefit and serve every other.”
+    </p>
+
+    <p id="fn2">
+      <strong><a href="#ref2">[2]</a></strong>
+      Which spectrum? Most of them
+    </p>
+
+        <p id="fn3">
+      <strong><a href="#ref3">[2]</a></strong>
+      Ranked by first appearance (i.e., my top song overall was by Taylor Swift). Artists without a number of tracks had only one. I counted each artist as one word for my 77-word section limit. I didn’t count features/guest appearances.
+    </p>
+
+</html>
