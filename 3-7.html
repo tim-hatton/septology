@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Septology Vol. III No. 6</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&amp;family=IBM+Plex+Mono:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://assets.buttondown.email/images/bb8da89c-cde3-4358-8c27-a2dd22c13397.png" rel="icon" type="image/png"/>
+<style>
+
+    @font-face {
+      font-family: 'Verre';
+      src: url('https://tim-hatton.github.io/septology/Verre-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Geist', sans-serif;
+      background-color: white;
+      color: #000;
+      padding: 0;
+    }
+
+
+    
+    a {
+      color: #808080;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #808080;
+    }
+
+    .logo {
+      text-align: center;
+      padding: 60px 20px 20px 20px;
+    }
+
+    .logo img {
+      max-width: 420px;
+      width: 100%;
+      height: auto;
+      display: inline-block;
+    }
+
+    .hero-link {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 13px;
+    }
+
+    .header-full-width-bar {
+      width: 100%;
+      border-bottom: 3px solid #000;
+      background-color: white;
+    }
+
+    .header-inner-column {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      gap: 24px;
+      font-family: 'Verre', 'IBM Plex Mono', monospace;
+      font-size: 16px;
+      padding: 15px 0;
+    }
+
+    .header-inner-column span:nth-child(1) { text-align: left; }
+    .header-inner-column span:nth-child(2) { text-align: center; }
+    .header-inner-column span:nth-child(3) { text-align: right; }
+
+    .content-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content-section,
+    .subsection {
+      border-left: 3px solid #000;
+      border-right: 3px solid #000;
+      border-bottom: 3px solid #000;
+      border-top: none;
+      padding: 40px;
+      background-color: white;
+    }
+
+    .content-section h1,
+    .content-section h2,
+    .content-section h3,
+    .subsection h1,
+    .subsection h2,
+    .subsection h3 {
+      font-family: 'Verre', 'IBM Plex Mono', monospace;
+      font-weight: normal;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .content-section h1 { font-size: 24px; }
+    .content-section h3,
+    .subsection h3 { font-size: 20px; }
+
+    .content-section p,
+    .content-section li,
+    .content-section figcaption,
+    .subsection p,
+    .subsection li,
+    .subsection figcaption {
+      font-family: 'Geist', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 1.6em;
+    }
+
+    .content-section p:last-child,
+    .content-section figure:last-child,
+    .content-section ul:last-child,
+    .content-section ol:last-child,
+    .subsection p:last-child,
+    .subsection figure:last-child,
+    .subsection ul:last-child,
+    .subsection ol:last-child {
+      margin-bottom: 0;
+    }
+
+    .content-section strong,
+    .subsection strong {
+      font-family: 'Verre', 'IBM Plex Mono', monospace;
+      font-weight: 500;
+    }
+
+    .content-section figure,
+    .subsection figure {
+      margin: 24px 0;
+      width: 100%;
+    }
+
+    .content-section figure img,
+    .subsection figure img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d9d9d9;
+    }
+
+    .content-section hr,
+    .subsection hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 20px 0;
+    }
+
+    .subsection ol {
+      padding-left: 22px;
+      margin-bottom: 1.6em;
+    }
+.content-section figcaption,
+.subsection figcaption {
+  font-size: 13px;
+  color: #808080;
+  text-align: center;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+    sup a {
+      text-decoration: none;
+      color: #808080;
+    }
+
+    .footnotes p {
+      font-size: 13px;
+      color: #333;
+      scroll-margin-top: 24px;
+    }
+
+    .footer-text {
+      max-width: 800px;
+      margin: 0 auto;
+      font-family: 'Geist', sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      padding: 30px 0;
+      text-align: left;
+    }
+    .footnotes .signoff {
+  font-family: 'Geist', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #000;
+  margin-bottom: 2rem;
+    }
+    .footer-text p { margin-bottom: 10px; }
+
+
+    
+    @media (max-width: 840px) {
+      .header-inner-column,
+      .content-container,
+      .footer-text {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+      }
+
+      .logo { padding-top: 40px; }
+
+      .content-section,
+      .subsection { padding: 24px; }
+
+      .header-inner-column {
+        font-size: 14px;
+        gap: 12px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+<div class="logo">
+<img alt="Subscription box image" src="https://assets.buttondown.email/images/c894edf7-05f3-457d-b590-4d85ced4d519.png?w=960&amp;fit=max"/>
+</div>
+<div class="header-full-width-bar">
+<div class="header-inner-column">
+<span>Vol. III No. 7</span>
+<span>The Rest Of My Life</span>
+<span><a href="https://www.timhatton.online/newsletter-archive" rel="noopener noreferrer nofollow" target="_blank">Back To Newsletter Archive</a></span>
+</div>
+</div>
+<div class="content-container">
+<div class="content-section"><h1>Role Model</h1><p dir="ltr"><span>In December my daughter will be born. This is the fourth issue of <em>Septology</em> since I learned that, but this is the first time I’ve mentioned it, because the entire experience feels too sacred for words, let alone an e-mail. <em>My </em>only and begotten child being discussed on something as profane and banal as Al Gore’s internet?? Forget it! </span></p><p dir="ltr"><span>But of course this is the best thing to ever happen. It’s the only thing to have ever happened. Why would I talk about anything else?</span></p><hr/><p><span>In January I turned 30 years old. It did not feel like the beginning of a new era, but like confirmation of one that had already begun. I started that morning saying <em>buenos dias </em>to the contractors who were installing a new closet for Becky and me; my adulthood was well underway. It had been for some time. </span></p><p dir="ltr"><span>In my twenties I lived in Oklahoma, Iowa, Scotland, New York, Idaho, and Oklahoma again, not counting the long layovers in Montana and Minnesota. I moved ten times. This was an era of trying things out, changing direction, learning what worked and what didn’t. Any choice created infinite branching possibilities, any one of which I could have followed. Facing any decision, the question was simple: using my best judgment, what do I think would be best? </span></p><p dir="ltr"><span>Then I got married, which dramatically restricted the number of potential paths my life could take. But this was still a time of extreme flexibility; Becky changed jobs a lot, and if I’d wanted to, I could have. We had options. The dominant question changed very little: using <em>our </em>best judgment, what do <em>we </em>think would be best? </span></p><p dir="ltr"><span>Now there is a new and entirely different question to ask: what is best for the kid?</span></p><p dir="ltr"><span>Should we change jobs? Move? Rearrange the house? Pursue this hobby or that? Travel? Save money? Go see a movie? The choices might be difficult, but the criteria isn’t. I have a ruler against which to measure everything, and it’s her.</span></p><p dir="ltr"><span>I’m not even saying it’s a time of unprecedented selflessness (though it will be). I’m not saying all my hobbies will disappear so that I can spend all my time on the floor reading picture books (though many will). Is it good for the girl if her dad has a creative outlet for his writing? Yeah, probably it is. Is it good for the girl if her dad is watching Instagram Reels? Probably not. </span></p><p dir="ltr"><span>Over the New Year, I spent some time trying to think about what I wanted 2026 to look like—a theme I could use to define the year, and I decided it would be “role model.” I didn’t know, of course, that I would become a father this year, but I anticipated I would be someday. And so I wanted to look at my life through the eyes of someone who looked up to me. I would not want that person to think “Tim’s on his phone a lot,” or “it takes him a long time to start a task.” I would want them to think “Tim takes care of things.” “Tim has his own projects but doesn’t bury himself in them.” </span></p><p dir="ltr"><span>You can tell that the scope is much broader than “things a child would specifically recognize or articulate,” in part because this was eight months ago, and I didn’t have in mind a specific person who would be looking up to me. Now I do, which makes the process much easier and much more fun. I know who this kid is. I want her to be proud of me.</span></p><p dir="ltr"><span>Now and forever, my job is to be a good dad. And I can see how one might be intimidated by the scale and ambition of that goal, but I feel comforted by the simplicity. It’s a big goal but it’s only one goal. Being a good dad will require that I do other things well—love Becky, bring in money, etc.—but none contradict the main mission. The mistakes are inevitable, I have infinite opportunities to fail, but at least I’ll be aiming in the right direction.</span></p><p dir="ltr"><span>It’s kind of like how a football coach is responsible for strategy, conditioning, and clock management, but really his job is to get the ball into the end zone. If something doesn’t help accomplish that, you don’t do it. </span></p><p dir="ltr"><span>Or maybe it’s like I was driving in the city, making lots of little turns, stopping and starting, but now I’m on the highway. The road is straight, the choice is made, and all I have to do is keep going. For the rest of my life. This is all there is.</span></p></div>
+<div class="content-section">
+<p style="margin-top: 0; margin-bottom: 1.6em; font-size: 13px;">
+        You're reading an archived copy of Septology. Sign up to receive the next issue right to your e-mail:
+      </p>
+<form action="https://buttondown.com/api/emails/embed-subscribe/septology" class="embeddable-buttondown-form" method="post" onsubmit="window.open('https://buttondown.com/septology', 'popupwindow')" style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px;" target="popupwindow">
+<input id="bd-email" name="email" placeholder="you@example.com" style="font-family: 'IBM Plex Mono', monospace; padding: 8px; width: 100%; max-width: 450px; border: 1px solid #000; margin-bottom: 10px;" type="email"/>
+<input style="background-color: #000; color: #fff; border: none; padding: 10px 20px; border-radius: 4px; font-family: 'IBM Plex Mono', monospace; cursor: pointer; font-size: 14px;" type="submit" value="Subscribe"/>
+</form>
+</div>
+<div class="subsection"><p><strong><h3>1. Nothing</h3></strong></p><p><span>I consumed <em>Spider-Man: Brand New Day </em>like a bag of candy. A pleasant absence of substance. My friends asked for my thoughts afterward—what was there to think about?</span></p><p dir="ltr"><span>My dad sometimes talks about the first ten years of my life as a black hole of cultural awareness. He is not familiar with much that was released from 1996-2006 (</span><a href="https://tim-hatton.github.io/septology/3-2" rel="noopener noreferrer nofollow" target="_blank"><span style="color: rgb(17, 85, 204);"><u>when all the good TV came out</u></span></a><span>). Going into a similar era myself, that break sounds kind of nice</span></p></div>
+<div class="subsection"><p><strong><h3>2. Bread</h3></strong></p><p dir="ltr"><a href="https://tim-hatton.github.io/septology/3-6" rel="noopener noreferrer nofollow" target="_blank"><span style="color: rgb(17, 85, 204);"><u>Last month</u></span></a><span> I shared a Caity Weaver essay </span><a href="https://archive.is/HZDO7#selection-915.0-915.376" rel="noopener noreferrer nofollow" target="_blank"><span style="color: rgb(17, 85, 204);"><u>about garage sales</u></span></a><span>; this time it’s bread. “What is the best free restaurant bread in America?”<sup><a href="#fn1" id="ref1">[1]</a></sup> she asks and then, for 11,000 words, she answers. What follows is a deeply moving meditation on Diet Coke and losing her father. I laughed out loud many times. </span></p><p><span>After reading that article, I noticed my own sentences were stronger and more interesting. That’s what great, voicey writing does, and praise God</span></p></div>
+<div class="subsection"><p><strong><h3>3. Reading</h3></strong></p><p><span>I have purchased for myself a tiny e-reader. In a perfect world I would be reaching for a book in any free moment, but in practice I found it difficult and pretentious to walk into the post office with a book under my arm just in case the line was long. Early days but I hope this solves that problem so I can read like a fourth grader (compulsively, without ever thinking about scrolling on a phone)</span></p><figure><img alt="Photo of e reader with ruler for scale" class="" draggable="false" src="https://assets.buttondown.email/images/ef528d24-6e4b-448c-a27b-1860864cac44.png?w=960&amp;fit=max" width="600"/><figcaption>The XTEink X3</figcaption></figure></div>
+<div class="subsection"><p><strong><h3>4. The End Of Reading</h3></strong></p><p><span>I want to read more; apparently</span><a href="https://archive.is/hJRqc" rel="noopener noreferrer nofollow" target="_blank"><span style="color: rgb(17, 85, 204);"><u> many people are reading less</u></span></a><span>. This article<sup><a href="#fn2" id="ref2">[2]</a></sup> presents the strange and provocative idea that literacy was a historical blip. It was only recently that everyone could read and in the future nobody will (they’ll only listen to podcasts—we’re going back to oral tradition). </span></p><p dir="ltr"><span>I didn’t read it with dismay or horror, but puzzlement and curiosity. This is really how people live? My fellow man is an inscrutable mystery I guess</span></p></div>
+<div class="subsection"><p><strong><h3>5. A Theory of Justice</h3></strong></p><p><span>The first thing I loaded onto my device was Becky’s master’s dissertation, which I am copyediting (I’m incredibly proud of her). It had been a long time since I had put together an academic argument, and oddly, I think I’m better at it now than I was back in college. I don’t know if that’s strong evidence the system works (I can produce the work it asks of me) or doesn’t (I learned better after leaving school).</span></p></div>
+<div class="subsection"><p><strong><h3>6. Shelves Again</h3></strong></p><p><span>Perhaps it goes without saying, because it happens so often, but I have come up with a new way of storing books in my house. This time I built new shelves on either side of my fireplace. I built a spot for the records so we can sit on the couch and listen. Its cords are hidden behind a covering painted the same color as the wall. The TV is higher, easier to see. I’m very proud. </span></p><figure><img alt="new shelves with books and records on them" class="" draggable="false" src="https://assets.buttondown.email/images/effaf1b9-5215-465a-aa6a-53d6357b44d3.png?w=960&amp;fit=max" width="600"/><figcaption></figcaption></figure><figure><img alt="New shelves and entertainment center for the TV" class="" draggable="false" src="https://assets.buttondown.email/images/d3707120-881a-4cef-a1b5-438b6fe15e0c.png?w=960&amp;fit=max" width="600"/><figcaption></figcaption></figure></div>
+<div class="subsection"><p><strong><h3>7. End Of An Era</h3></strong></p><p><span>That’s it for the third seven-letter cycle of <em>Septology. </em>I will come back in October with an all-new, all-different format. I don’t know what the next seven months will look like. We’ll find out together. This season was a good one. Its titles form a complete thought (a poem?)</span></p><p dir="ltr"><a href="https://tim-hatton.github.io/septology/3-1" rel="noopener noreferrer nofollow" target="_blank"><span style="color: rgb(17, 85, 204);"><u>Timbo's</u></span></a></p><p dir="ltr"><a href="https://tim-hatton.github.io/septology/3-2" rel="noopener noreferrer nofollow" target="_blank"><span style="color: rgb(17, 85, 204);"><u>On An Upswing</u></span></a></p><p dir="ltr"><a href="https://tim-hatton.github.io/septology/3-3" rel="noopener noreferrer nofollow" target="_blank"><span style="color: rgb(17, 85, 204);"><u>That's Me. That's Us. </u></span></a></p><p dir="ltr"><a href="https://tim-hatton.github.io/septology/3-4" rel="noopener noreferrer nofollow" target="_blank"><span style="color: rgb(17, 85, 204);"><u>On The Run</u></span></a></p><p dir="ltr"><a href="https://tim-hatton.github.io/septology/3-5" rel="noopener noreferrer nofollow" target="_blank"><span style="color: rgb(17, 85, 204);"><u>Each Has The Work And Office Of His Trade</u></span></a></p><p dir="ltr"><a href="https://tim-hatton.github.io/septology/3-6" rel="noopener noreferrer nofollow" target="_blank"><span style="color: rgb(17, 85, 204);"><u>To What End?</u></span></a></p><p dir="ltr"><a href="https://tim-hatton.github.io/septology/3-7" rel="noopener noreferrer nofollow" target="_blank"><span style="color: rgb(17, 85, 204);"><u>The Rest of My Life</u></span></a></p></div>
+<div class="content-section footnotes"><p class="signoff">Thank you as always, for reading. I'll see you October 7.</p><p class="signoff">From Tulsa with love,</p><p class="signoff"><em>Tim</em></p>
+  
+  <p id="fn1">
+  <strong><a href="#ref1">[1]</a></strong>
+  Olive Garden has the best free bread. There’s a long bit in the piece—one of the funniest—about how nobody will actually answer the question without disclaimers. I’d rather put forth a bad take on bread than be a coward
+</p>
+<p id="fn2">
+  <strong><a href="#ref2">[2]</a></strong>
+   You thought I was only going to send one article from The Atlantic today?? Nice try buddy here’s two articles from The Atlantic
+</p>
+</div></div>
+
+
+</body></html>
